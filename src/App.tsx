@@ -5,6 +5,7 @@ import Lesson from './pages/Lesson/Lesson';
 import Habit from './pages/Habit/Habit';
 import Goal from './pages/Goal/Goal';
 import { useState } from 'react';
+import Home from './pages/Home/Home';
 
 function App() {
   const [isNavOn, setIsNavOn] = useState<boolean>(false);
@@ -18,11 +19,11 @@ function App() {
         <section className='flex flex-row'>
           {isNavOn && (
             <nav className='flex flex-col gap-[12px] px-[8px] py-[16px]'>
-              <Link to='/'>todo</Link>
-              <Link to='/goal'>goal</Link>
-              <Link to='/habit'>habit</Link>
-              <Link to='/lesson'>lesson</Link>
-              <Link to='/project'>project</Link>
+              <Link to='/todo'>일정</Link>
+              <Link to='/goal'>목표</Link>
+              <Link to='/habit'>습관</Link>
+              <Link to='/lesson'>교훈</Link>
+              <Link to='/project'>프로젝트</Link>
               <button onClick={() => setIsNavOn(false)}> {'<'} </button>
             </nav>
           )}
@@ -32,7 +33,8 @@ function App() {
               <Route path='/habit' element={<Habit />} />
               <Route path='/lesson' element={<Lesson />} />
               <Route path='/project' element={<Project />} />
-              <Route path='/' element={<Todo />} />
+              <Route path='/todo' element={<Todo />} />
+              <Route path='/' element={<Home />} />
             </Routes>
           </main>
         </section>
