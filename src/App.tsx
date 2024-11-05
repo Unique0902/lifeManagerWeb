@@ -155,7 +155,7 @@ function App() {
                 <Route path='new' element={<TodoNew />} />
                 <Route path='edit' element={<TodoEdit />} />
                 <Route path='month' element={<TodoMonth />} />
-                <Route path='daily' element={<TodoDaily />} />
+                <Route path='daily/:date' element={<TodoDaily />} />
                 <Route path='wall' element={<TodoWall />} />
               </Route>
               <Route path='/' element={<Home />} />

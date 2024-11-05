@@ -10,7 +10,7 @@ const Todo: React.FC<Props> = ({}) => {
   return (
     <div>
       <h1 className='text-[20px] text-center py-[8px] w-full'>
-        {date.getMonth()}월 {date.getDate()}일 오늘 할일
+        {date.getMonth() + 1}월 {date.getDate()}일 오늘 할일
       </h1>
       <ul className='flex flex-col gap-[8px]'>
         {todayTodosExArr.map((dt, idx) => {

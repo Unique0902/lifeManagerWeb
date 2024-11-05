@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {}
 
 const TodoMonth: React.FC<Props> = () => {
+  const navigate = useNavigate();
+
   const [nowDate, setNowDate] = useState(new Date());
   const dateCopy = new Date(nowDate);
   dateCopy.setMonth(nowDate.getMonth() + 1);
@@ -45,6 +48,13 @@ const TodoMonth: React.FC<Props> = () => {
         {Array.from({ length: totalDayNum }, (_, i) => i + 1).map((dayNum) => (
           <li
             key={dayNum + '일'}
+            onClick={() =>
+              navigate(
+                `/todo/daily/${nowDate.getFullYear()}-${
+                  nowDate.getMonth() + 1
+                }-${dayNum}`
+              )
+            }
             className='h-[72px] cursor-pointer hover:scale-110 bg-white text-black p-[4px] border border-black'
           >
             {dayNum}
