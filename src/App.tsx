@@ -37,7 +37,6 @@ const pageDataArr = [
     subPage: [
       { title: '오늘 할일', link: '' },
       { title: '월별', link: '/month' },
-      { title: '일별', link: '/daily' },
       { title: '할일 추가', link: '/new' },
     ],
   },
