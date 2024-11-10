@@ -3,7 +3,7 @@ import React from 'react';
 interface Props {}
 
 const Goal: React.FC<Props> = ({}) => {
-  return <div>Goal</div>;
+  return <div>ㅁㄴㄹ</div>;
 };
 
 export default Goal;

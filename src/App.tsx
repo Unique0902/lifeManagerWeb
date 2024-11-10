@@ -93,13 +93,16 @@ function App() {
         </header>
         <section className='flex flex-row'>
           {isNavOn && (
-            <nav className='flex flex-col gap-[12px] px-[8px] py-[16px]'>
-              <button onClick={() => setIsNavOn(false)} className=' '>
-                {'X'}
-              </button>
-              <button onClick={() => setIsSubNavOn((prev) => !prev)}>
-                세부
-              </button>
+            <nav className='flex flex-col gap-[12px] px-[8px] py-[16px] bg-sky-800 rounded-xl ml-[4px]'>
+              <div className='flex flex-row justify-between'>
+                <button onClick={() => setIsSubNavOn((prev) => !prev)}>
+                  {isSubNavOn ? '<' : '>'}
+                </button>
+                <button onClick={() => setIsNavOn(false)} className=' '>
+                  {'X'}
+                </button>
+              </div>
+
               {isSubNavOn ? (
                 <>
                   {subNavData.map((dt) => (

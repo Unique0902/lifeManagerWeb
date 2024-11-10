@@ -12,7 +12,7 @@ export type Goal = {
   description: string;
   period: string;
   lessonId?: string;
-  parentGoalId?: string;
+  subGoal?: Goal[];
   isAccomplished: boolean;
 };
 

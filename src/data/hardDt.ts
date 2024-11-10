@@ -13,15 +13,16 @@ export const GoalsExArr: Goal[] = [
     period: '2024-11-01~2024-12-04',
     lessonId: 'l1',
     isAccomplished: false,
-  },
-  {
-    id: 'gsr1',
-    title: '하위목표1',
-    description: '하위목표1 설명',
-    period: '2024-11-01~2024-12-04',
-    lessonId: 'l1',
-    parentGoalId: 'gr1',
-    isAccomplished: true,
+    subGoal: [
+      {
+        id: 'gsr1',
+        title: '하위목표1',
+        description: '하위목표1 설명',
+        period: '2024-11-01~2024-12-04',
+        lessonId: 'l1',
+        isAccomplished: true,
+      },
+    ],
   },
 ];
 
