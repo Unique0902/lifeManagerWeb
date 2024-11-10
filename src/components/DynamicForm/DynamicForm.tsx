@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 interface DynamicFormProps<T> {
   data: T;
   onChange: (updatedData: T) => void;
@@ -12,6 +14,7 @@ function DynamicForm<T extends { [key: string]: string | boolean }>({
   const handleChange = (key: keyof T, value: string | boolean) => {
     onChange({ ...data, [key]: value });
   };
+  const navigate = useNavigate();
 
   return (
     <form
@@ -54,7 +57,9 @@ function DynamicForm<T extends { [key: string]: string | boolean }>({
         return null;
       })}
       <div className='flex flex-row gap-[8px]'>
-        <button type='button'>취소</button>
+        <button type='button' onClick={() => navigate(-1)}>
+          취소
+        </button>
         <button>저장</button>
       </div>
     </form>
