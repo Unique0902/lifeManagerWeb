@@ -36,17 +36,17 @@ export type Todo = {
   isAccomplished: boolean;
 };
 
-export interface Lesson {
+export type Lesson = {
   id: string;
   title: string;
   description: string;
-}
+};
 
-export interface Project {
+export type Project = {
   id: string;
   goalId?: string;
   concrete: string;
   thingToNeed: string[];
   todoIdArr?: string[];
   isAccomplished: boolean;
-}
+};
