@@ -44,6 +44,8 @@ export type Lesson = {
 
 export type Project = {
   id: string;
+  title: string;
+  description: string;
   goalId?: string;
   concrete: string;
   thingToNeed: string[];

@@ -118,6 +118,8 @@ export const lessonsExArr: Lesson[] = [
 export const projectsExArr: Project[] = [
   {
     id: 'p1',
+    title: '프로젝트1',
+    description: '프로젝트1 설명',
     goalId: 'g1',
     concrete: '프로젝트1 구체상',
     thingToNeed: ['프로젝트1 준비물1', '프로젝트2 준비물2'],
