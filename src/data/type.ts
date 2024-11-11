@@ -1,10 +1,10 @@
-export interface Habit {
+export type Habit = {
   id: string;
   when: string;
   what: string;
   cycle: string;
   projectId?: string;
-}
+};
 
 export type TGoal = {
   id: string;
