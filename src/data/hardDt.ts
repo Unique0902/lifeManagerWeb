@@ -1,11 +1,11 @@
-import { Goal, Habit, Lesson, Project, Todo } from './type';
+import { TGoal, Habit, Lesson, Project, Todo } from './type';
 
 export const HabitsExArr: Habit[] = [
   { id: 'h1', when: '저녁먹고', what: '운동', projectId: 'p1', cycle: '매일' },
   { id: 'h2', when: '일어나서', what: '독서', cycle: '매일' },
 ];
 
-export const GoalsExArr: Goal[] = [
+export const GoalsExArr: TGoal[] = [
   {
     id: 'gr1',
     title: '상위목표1',
@@ -19,10 +19,41 @@ export const GoalsExArr: Goal[] = [
         title: '하위목표1',
         description: '하위목표1 설명',
         period: '2024-11-01~2024-12-04',
-        lessonId: 'l1',
         isAccomplished: true,
       },
     ],
+  },
+  {
+    id: 'gr2',
+    title: '상위목표2',
+    description: '상위목표2 설명',
+    period: '2024-11-01~2024-12-04',
+    lessonId: 'l1',
+    isAccomplished: false,
+    subGoal: [
+      {
+        id: 'gsr2',
+        title: '하위목표1',
+        description: '하위목표1 설명',
+        period: '2024-11-01~2024-12-04',
+        isAccomplished: true,
+      },
+      {
+        id: 'gsr3',
+        title: '하위목표2',
+        description: '하위목표2 설명',
+        period: '2024-11-01~2024-12-04',
+        isAccomplished: true,
+      },
+    ],
+  },
+  {
+    id: 'gr3',
+    title: '상위목표3',
+    description: '상위목표3 설명',
+    period: '2024-11-01~2024-12-04',
+    lessonId: 'l1',
+    isAccomplished: false,
   },
 ];
 

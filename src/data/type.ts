@@ -6,13 +6,22 @@ export interface Habit {
   projectId?: string;
 }
 
-export type Goal = {
+export type TGoal = {
   id: string;
   title: string;
   description: string;
   period: string;
   lessonId?: string;
-  subGoal?: Goal[];
+  subGoal?: SubGoal[];
+  isAccomplished: boolean;
+};
+
+export type SubGoal = {
+  id: string;
+  title: string;
+  description: string;
+  period: string;
+  subGoal?: SubGoal[];
   isAccomplished: boolean;
 };
 

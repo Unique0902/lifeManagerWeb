@@ -6,7 +6,7 @@ interface DynamicFormProps<T> {
   handleSubmit?: (data: T) => void;
 }
 
-function DynamicForm<T extends { [key: string]: string | boolean }>({
+function DynamicForm<T extends { [key: string]: string | boolean | any[] }>({
   data,
   onChange,
   handleSubmit,
